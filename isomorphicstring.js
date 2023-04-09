@@ -50,8 +50,8 @@
 		return 1
 	}
 	
-	let res = Isomorphicstring("aab", "xxy")
-	console.log(res)
+	let sol = Isomorphicstring("aab", "xxy")
+	console.log(sol)
 
-	res = Isomorphicstring("aab", "xyz")
-	console.log(res)
+	results = Isomorphicstring("aab", "xyz")
+	console.log(results)

@@ -35,8 +35,8 @@
 				if (seen[string2[i].charCodeAt()] == true)
 					return false
 
-				// Mark current character of
-				// string2 as visited
+				/* Mark current character of
+				string2 as visited */
 				seen[string2[i].charCodeAt()] = true
 
 				// Store mapping of current characters

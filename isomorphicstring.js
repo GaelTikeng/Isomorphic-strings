@@ -44,10 +44,10 @@
 			}
 
 			else if (map[string1[i].charCodeAt()] != string2[i].charCodeAt())
-				return 0
+				return false
 		}
 
-		return 1
+		return true
 	}
 	
 	let sol = Isomorphicstring("aab", "xxy")

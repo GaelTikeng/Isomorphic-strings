@@ -32,13 +32,11 @@ p {
 .input-fields {
   display: flex;
   justify-content: space-between;
-
 }
 
 .fields {
   display: flex;
   flex-direction: column;
-
 }
 
 input {

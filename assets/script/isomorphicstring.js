@@ -16,7 +16,6 @@ function isomorphicString() {
 	let string2 = document.querySelector('.string2').value
   let x = string1.length;
   let y = string2.length;
-	console.log(typeof string1)
   if (x != y) {
 		displayResult.innerHTML = 'The two words must be of same length'
 		console.log("not the same")

@@ -35,7 +35,8 @@ function isomorphicString() {
     for (let i = 0; i < y; i++) {
       if (map[string1[i].charCodeAt()] === -1) {
         if (seen[string2[i].charCodeAt()] === true) {
-          displayResult.innerHTML = "False"
+					displayResult.innerHTML = "False"
+          // return false
         }
 
         /* Mark current character of

@@ -3,9 +3,9 @@
 
 // catching the DOM
 
-const button = document.querySelector('.btn');
-const displayResult = document.querySelector('.result');
-const size = 256; // inintialize the maximum number of characters in a string
+const button = document.querySelector('.btn')
+const displayResult = document.querySelector('.result')
+const size = 256 // inintialize the maximum number of characters in a string
 
 // EventListener
 button.addEventListener('click', isomorphicString)

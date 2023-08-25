@@ -12,44 +12,32 @@ button.addEventListener('click', isomorphicString)
 
 // Event handeler
 function isomorphicString () {
-  const string1 = document.querySelector('.string1').value
-  const string2 = document.querySelector('.string2').value
-  const x = string1.length
-  const y = string2.length
-  if (x !== y) {
-    displayResult.innerHTML = 'The two words must be of same length'
-    // console.log("not the same")
-  } else {
-    // seen characters in str2
-    const seen = new Array(size)
-    // console.log(typeof seen)
-    for (let i = 0; i < size; i++) seen[i] = false
+  const s = document.querySelector('.string1').value
+  const t = document.querySelector('.string2').value
 
-    const map = new Array(size)
-    map.fill(0) // fill the map with 0s
-    // console.log(typeof map)
+  if (s.length !== t.length) return displayResult.innerHTML = 'The two strings must bee the same';
 
-    for (let i = 0; i < size; i++) map[i] = -1
+  const mapa = new Map();
+  const mapb = new Map();
 
-    // go through all characters of the string one by one
-    for (let i = 0; i < y; i++) {
-      if (map[string1[i].charCodeAt()] === -1) {
-        if (seen[string2[i].charCodeAt()] === true) {
-          displayResult.innerHTML = 'False'
-          // return false
-        }
-
-        /* Mark current character of string2 as visited */
-        seen[string2[i].charCodeAt()] = true
-
-        // Store mapping of current characters
-        map[string1[i].charCodeAt()] = string2[i].charCodeAt()
-      } else if (map[string1[i].charCodeAt()] !== string2[i].charCodeAt()) {
-        displayResult.innerHTML = 'false'
+  for (let i = 0; i < s.length; i++) {
+    if (mapa.has(s[i])) {
+      if (mapa.get(s[i]) !== t[i]) {
+        return displayResult.innerHTML = 'false';
       }
-      // return false
+    } else {
+      mapa.set(s[i], t[i])
     }
-    displayResult.innerHTML = 'true'
-    // return true
+
+    if (mapb.has(t[i])) {
+      if (mapb.get(t[i]) !== s[i]) {
+        return displayResult.innerHTML = 'false';
+      }
+    } else {
+      mapb.set(t[i], s[i])
+    }
   }
+
+  return displayResult.innerHTML = 'true'
+
 }

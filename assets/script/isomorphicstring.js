@@ -6,7 +6,7 @@
 const button = document.querySelector('.btn')
 const displayResult = document.querySelector('.result')
 
-// EventListener
+// listening to a click button
 button.addEventListener('click', isomorphicString)
 
 // Event handeler
@@ -19,15 +19,16 @@ function isomorphicString () {
   }
   const mapa = new Map()
   const mapb = new Map()
-
   for (let i = 0; i < s.length; i++) {
     if (mapa.has(s[i])) {
       if (mapa.get(s[i]) !== t[i]) {
+        console.log(mapa.get(s[i]))
         displayResult.innerHTML = 'false'
         return
       }
     } else {
       mapa.set(s[i], t[i])
+      console.log(mapa)
     }
 
     if (mapb.has(t[i])) {
